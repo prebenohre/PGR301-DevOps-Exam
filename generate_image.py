@@ -13,7 +13,7 @@ model_id = "amazon.titan-image-generator-v1"
 bucket_name = "pgr301-couch-explorers"
 
 # Frank; Important; Change this prompt to something else before the presentation with the investors!
-prompt = "Investors, with circus hats, giving money to developers with large smiles"
+prompt = "Very happy old man laughing so hard he cries, he is so incredibly happy and laughs harder than he ever have"
 
 seed = random.randint(0, 2147483647)
 s3_image_path = f"generated_images/titan_{seed}.png"
