@@ -22,7 +22,7 @@ jobs:
 
       # Sett opp SAM CLI
       - name: Set up AWS SAM CLI
-        uses: aws-actions/setup-sam-cli@v1
+        uses: aws-actions/setup-sam@v1
 
       # Konfigurer AWS-legitimasjonene for GitHub Actions
       - name: Configure AWS credentials
