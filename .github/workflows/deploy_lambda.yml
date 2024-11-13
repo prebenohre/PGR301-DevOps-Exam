@@ -40,8 +40,8 @@ jobs:
       - name: Deploy SAM Application
         run: |
           sam deploy -t sam_lambda/29-image-generator-lambda/template.yaml \
-            --no-confirm-changeset
-            --no-fail-on-empty-changeset
+            --no-confirm-changeset \
+            --no-fail-on-empty-changeset \
             --stack-name image-generator-lambda-29 \
             --s3-bucket pgr301-couch-explorers \  # Her spesifiserer vi S3-bucketen direkte
             --capabilities CAPABILITY_IAM \
