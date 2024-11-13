@@ -15,9 +15,10 @@ parallel = true
 lint = true
 
 [default.deploy.parameters]
+stack_name = "image-generator-lambda-29"
+s3_bucket = "pgr301-couch-explorers"
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
-resolve_s3 = true
 s3_prefix = "image-generator-lambda-29"
 region = "eu-west-1"
 disable_rollback = true
