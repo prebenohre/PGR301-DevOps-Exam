@@ -1,0 +1,68 @@
+# Python bytecode og cache-filer
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Miljøfiler
+.env
+.venv/
+venv/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# AWS SAM build-artefakter og lokale testdata
+.aws-sam/
+.events/
+
+# Cloud9 spesifikke filer
+.c9/
+.c9revisions
+*.launch
+
+# Loggfiler
+*.log
+*.tmp
+*.swp
+*.swo
+
+# IDE og editor spesifikke filer
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Pytest og andre tester
+*.coverage
+.cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+test-output/
+
+# Installerbare pakker
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+sdist/
+wheels/
+*.egg-info/
+.installed.cfg
+
+# Komprimerte filer og arkiver
+*.tar.gz
+*.zip
+*.tar
+*.rar
+*.gz
+*.bz2
+
+# Andre unødvendige filer
+*.DS_Store
+Thumbs.db
