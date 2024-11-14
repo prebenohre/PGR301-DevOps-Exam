@@ -68,15 +68,15 @@ wheels/
 Thumbs.db
 
 # Terraform spesifikke filer
-.terraform/             # Terraform-mappen som inneholder lokale plugin-data
-*.tfstate              # Terraform state-filer som inneholder tilstanden til infrastrukturen din
-*.tfstate.*            # Backupfiler av tfstate-filer (som f.eks. .tfstate.backup)
-crash.log              # Crash-log filer generert av Terraform
-override.tf            # Override-filer brukt for lokale endringer
-override.tf.json       # Override-filer i JSON-format
-*_override.tf          # Filnavnsmønster for alle lokale overrides
-*_override.tf.json     # Filnavnsmønster for JSON-baserte lokale overrides
-.terraformrc           # Lokal konfigurasjon av Terraform CLI
-terraform.rc           # Konfigurasjonsfiler for Terraform CLI
-.plan                  # Terraform planfiler som inneholder infrastrukturendringer før de anvendes
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf      
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+.plan
 
