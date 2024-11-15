@@ -7,3 +7,8 @@ output "lambda_function_arn" {
   description = "ARN for Lambda-funksjonen med nytt navn"
   value       = aws_lambda_function.image_processor.arn
 }
+
+output "cloudwatch_alarm_arn" {
+  description = "ARN for CloudWatch-alarmen"
+  value       = aws_cloudwatch_metric_alarm.sqs_age_alarm.arn
+}

@@ -79,6 +79,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 .plan
+terraform.tfvars
 
 # --- Java spesifikke filer og mapper ---
 

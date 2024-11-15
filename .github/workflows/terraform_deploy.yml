@@ -36,8 +36,8 @@ jobs:
 
       - name: Terraform Plan
         if: github.ref != 'refs/heads/main'
-        run: terraform plan
+        run: terraform plan -var="alarm_email=${{ secrets.ALARM_EMAIL }}"
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -var="alarm_email=${{ secrets.ALARM_EMAIL }}"
