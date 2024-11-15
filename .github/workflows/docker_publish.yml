@@ -33,8 +33,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sqs-client:${{ github.sha }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sqs-client:latest
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/sqs-client:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/sqs-client:latest
 
       - name: Logout from Docker Hub
         run: docker logout
