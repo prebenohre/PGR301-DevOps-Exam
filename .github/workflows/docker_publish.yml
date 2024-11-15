@@ -9,9 +9,6 @@ jobs:
   build_and_push:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: java_sqs_client  # Setter arbeidskatalog til java_sqs_client/
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -31,7 +28,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./java_sqs_client
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/sqs-client:${{ github.sha }}
