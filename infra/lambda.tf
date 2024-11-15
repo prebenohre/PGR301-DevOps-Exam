@@ -3,7 +3,7 @@ resource "aws_lambda_function" "image_processor" {
   role          = aws_iam_role.lambda_exec_role.arn
   handler       = "lambda_sqs.lambda_handler"
   runtime       = "python3.8"
-  timeout       = 30  # Timeout configured for longer image processing time
+  timeout       = 30  # Timeout satt til 30 sekunder for at bildegenerering rekker å bli ferdig
 
   filename = data.archive_file.lambda_zip.output_path
 

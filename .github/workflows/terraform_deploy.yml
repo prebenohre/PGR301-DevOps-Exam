@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: infra  # Setter arbeidskatalog til infra/
+        working-directory: infra
     steps:
       - name: Checkout
         uses: actions/checkout@v3

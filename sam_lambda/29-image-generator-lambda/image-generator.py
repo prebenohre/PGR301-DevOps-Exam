@@ -5,16 +5,16 @@ import os
 import random
 import logging
 
-# Sett opp logging
+# Setter opp logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Sett opp AWS-klienter
+# Setter opp AWS-klienter
 bedrock_client = boto3.client("bedrock-runtime", region_name="us-east-1")
 s3_client = boto3.client("s3")
 
 def lambda_handler(event, context):
-    # Les bucket-navnet fra miljøvariabelen
+    # Leser bucket-navnet fra miljøvariabelen
     bucket_name = os.environ.get("BUCKET_NAME")
     if not bucket_name:
         logger.error("BUCKET_NAME environment variable is not set.")
@@ -23,7 +23,7 @@ def lambda_handler(event, context):
             "body": json.dumps({"error": "Server configuration error"})
         }
     
-    # Les prompt fra forespørselen og valider den
+    # Leser prompt fra forespørselen og valider den
     try:
         body = json.loads(event["body"])
         prompt = body.get("prompt")
@@ -41,11 +41,11 @@ def lambda_handler(event, context):
             "body": json.dumps({"error": "Invalid JSON in request body"})
         }
 
-    # Generer et unikt filnavn
+    # Genererer et unikt filnavn
     seed = random.randint(0, 2147483647)
     s3_image_path = f"29/generated_images/titan_{seed}.png"
 
-    # Konfigurer forespørsel til Bedrock
+    # Konfigurerer forespørsel til Bedrock
     native_request = {
         "taskType": "TEXT_IMAGE",
         "textToImageParams": {"text": prompt},
@@ -59,7 +59,7 @@ def lambda_handler(event, context):
         }
     }
 
-    # Kall Bedrock-modellen og håndter feil
+    # Kaller Bedrock-modellen og håndter feil
     try:
         response = bedrock_client.invoke_model(
             modelId="amazon.titan-image-generator-v1", 
@@ -76,7 +76,7 @@ def lambda_handler(event, context):
             "body": json.dumps({"error": "Failed to generate image"})
         }
 
-    # Last opp bildet til S3 og håndter feil
+    # Laster opp bildet til S3 og håndterer feil
     try:
         s3_client.put_object(Bucket=bucket_name, Key=s3_image_path, Body=image_data)
         logger.info("Image uploaded to S3 at path: %s", s3_image_path)
@@ -87,7 +87,7 @@ def lambda_handler(event, context):
             "body": json.dumps({"error": "Failed to upload image to S3"})
         }
 
-    # Returner suksessrespons
+    # Returnerer suksessrespons
     return {
         "statusCode": 200,
         "body": json.dumps({"message": "Image generated and stored", "path": s3_image_path}),

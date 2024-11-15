@@ -16,7 +16,7 @@ resource "aws_iam_role" "lambda_exec_role" {
   })
 }
 
-# Inline policy for SQS, S3, and Bedrock permissions
+# Policy for SQS, S3, og Bedrock permissions
 resource "aws_iam_role_policy" "lambda_sqs_s3_bedrock_policy" {
   name = "lambda_sqs_s3_bedrock_policy"
   role = aws_iam_role.lambda_exec_role.id
@@ -56,7 +56,7 @@ resource "aws_iam_role_policy" "lambda_sqs_s3_bedrock_policy" {
   })
 }
 
-# Basic execution policy for CloudWatch logs
+# Policy for CloudWatch logs
 resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
   role       = aws_iam_role.lambda_exec_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
