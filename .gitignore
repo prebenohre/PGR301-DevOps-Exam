@@ -80,3 +80,75 @@ override.tf.json
 terraform.rc
 .plan
 
+# --- Java spesifikke filer og mapper ---
+
+# Kompilasjonsartefakter
+*.class
+
+# Mappen for utdata (target) generert av byggesystemer som Maven og Gradle
+target/
+out/
+bin/
+
+# Loggfiler og rapporter generert av testkjøringer
+*.log
+*.tmp
+hs_err_pid*
+*.hprof
+test-output/
+
+# Maven spesifikke filer og mapper
+.mvn/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+**/target/
+**/dependency-reduced-pom.xml
+release.properties
+dependency-reduced-pom.xml
+
+# Gradle spesifikke filer og mapper
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/wrapper/gradle-wrapper.properties
+**/build/
+
+# IntelliJ IDEA spesifikke filer
+*.iml
+*.iws
+.idea/
+out/
+
+# Eclipse spesifikke filer
+.classpath
+.project
+.settings/
+.factorypath
+
+# NetBeans spesifikke filer
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+*.nb-gradle/
+
+# BlueJ spesifikke filer
+*.ctxt
+
+# JRebel spesifikke filer
+rebel.xml
+
+# SonarQube rapporter
+.sonar/
+
+# Micronaut spesifikke filer
+.mn/
+
+# Logs and Database files
+*.log
+*.sql
+*.sqlite
+
+# Java Server Pages temporære filer
+*.jsp
+
