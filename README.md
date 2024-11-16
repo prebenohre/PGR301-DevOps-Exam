@@ -158,7 +158,7 @@ Jeg har utvidet Terraform-koden fra Oppgave 2 med en CloudWatch-alarm som trigge
 ### Skalerbarhet og kostnadskontroll
 - **Serverless Arkitektur:**
   - FaaS-tjenester skalerer automatisk basert på etterspørsel, uten behov for manuell intervensjon.
-  - *Betal per Bruk:* Kostnader er basert på faktisk forbruk (antall kjøringer og varighet), noe som kan være kostnadseffektivt for ujevne arbeidsbelastninger.
+  - Kostnader er basert på faktisk forbruk (antall kjøringer og varighet), noe som kan være kostnadseffektivt for ujevne arbeidsbelastninger.
   - Kan oppstå forsinkelser ved oppstart av funksjoner, noe som påvirker responstid.
 
 - **Mikrotjenestearkitektur:**
