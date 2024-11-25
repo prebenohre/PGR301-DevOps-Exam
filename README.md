@@ -191,16 +191,24 @@ Jeg har utvidet Terraform-koden fra Oppgave 2 med en CloudWatch-alarm som trigge
 
 ## Oppsummering av Leveranser
 
-| Oppgave | Leveranse                                                                                                                                                              |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 A     | HTTP Endepunkt: [https://7tppork5tf.execute-api.eu-west-1.amazonaws.com/Prod/generate](https://7tppork5tf.execute-api.eu-west-1.amazonaws.com/Prod/generate)           |
-| 1 B     | Workflow: [Deploy SAM Application Workflow](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11824291833/job/32945471053)                                 |
-| 2 A     | SQS-Kø URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29](https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29)   |
-| 2 B     | Workflow (Main): [Terraform Apply Workflow on Main](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11852263979/job/33030123146)                         |
-| 2 B     | Workflow (Feature): [Terraform Plan Workflow on Feature Branch](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11852236051/job/33030042683)             |
-| 3       | Beskrivelse av taggstrategi inkludert i README.md under oppgave 3 B.                                                                                                   |
-| 3       | Docker Image: `prebenohre/sqs-client`                                                                                                                                  |
-| 3       | SQS-Kø URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29](https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29)   |
-| 4       | Oppdatert Workflow: [Terraform Deploy with CloudWatch Alarm](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11862805143/job/33062977331)                |
-| 5       | Drøfting inkludert i README.md under oppgave 5.                                                                                                                        |
+- **Oppgave 1**
+  - HTTP Endepunkt: [https://7tppork5tf.execute-api.eu-west-1.amazonaws.com/Prod/generate](https://7tppork5tf.execute-api.eu-west-1.amazonaws.com/Prod/generate)
+  - Workflow: [Deploy SAM Application Workflow](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11824291833/job/32945471053)
+
+- **Oppgave 2**
+  - SQS-Kø URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29](https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29)
+  - Workflow (Main): [Terraform Apply Workflow on Main](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11852263979/job/33030123146)
+  - Workflow (Feature): [Terraform Plan Workflow on Feature Branch](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11852236051/job/33030042683)
+
+- **Oppgave 3**
+  - Beskrivelse av taggstrategi inkludert i README.md under oppgave 3 B.
+  - Docker Image: `prebenohre/sqs-client`
+  - SQS-Kø URL: [https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29](https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-29)
+
+- **Oppgave 4**
+  - Oppdatert Workflow: [Terraform Deploy with CloudWatch Alarm](https://github.com/prebenohre/PGR301-DevOps-Exam/actions/runs/11862805143/job/33062977331)
+
+- **Oppgave 5**
+  - Drøfting inkludert i README.md under oppgave 5.
+
 
